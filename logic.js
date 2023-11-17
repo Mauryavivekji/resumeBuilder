@@ -155,10 +155,10 @@ document.querySelector(".template").style.display="block";
 
 
 //  for print
-let print=document.querySelector(".print");
-print.addEventListener("click",()=>{
-window.print();}
-)
+// let print=document.querySelector(".print");
+// print.addEventListener("click",()=>{
+// window.print();}
+// )
 
 // edit your form
 document.querySelector(".btn-Edit")
@@ -170,9 +170,15 @@ document.querySelector(".btn-Edit")
 
 // for download
 // window.onload=function(){
-//     document.querySelector(".btn-download")
-//     .addEventListener("click",()=>{
+//     let print=document.querySelector(".print")
+//    print.addEventListener("click",()=>{
 // let page =this.document.querySelector(".template");
 // html2pdf().from(page).save();
 //     })
 // }
+let btn_download=document.querySelector(".btn_download");
+let page =this.document.querySelector(".template");
+btn_download.addEventListener("click",()=>{
+    console.log("hi hello")
+    html2pdf().from(page).save();
+})
